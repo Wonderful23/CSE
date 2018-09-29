@@ -98,7 +98,6 @@
 >> * 在性能上，AngularJS依赖对数据做脏检查，所以Watcher越多越慢。<br></br>
 >> * Vue.js使用基于依赖追踪的观察并且使用异步队列更新。所有的数据都是独立触发。<br></br>
 ### Vue.JS,React,Vue性能比较
->性能比较如下图。
+>性能比较如下图。<br></br>
 >![ABD](https://github.com/Wonderful23/-/blob/master/11/%E5%AF%B9%E6%AF%94.jpg)
 >可见Vue的性能是略优于React
->![ABD](https://github.com/Wonderful23/-/blob/master/11/%E5%AF%B9%E6%AF%94.jpg)
