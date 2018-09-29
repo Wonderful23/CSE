@@ -19,3 +19,8 @@
          2）自身必须有一个update()方法
          3）待属性变动，dep.notice()通知时，就调用自身的update()方法，并触发Compile中绑定的回调
    3.viewmodel(vue实例对象)作为数据绑定的入口，整合Observer、Compile、Watcher三者，通过Observer来监听自己的model数据变化，通过Compile来解析编译模板指令，最终利用Watcher搭起Observer和Compile之间的通信桥梁，达到数据变化 (ViewModel)-》视图更新(view)；视图变化(view)-》数据(ViewModel)变更的双向绑定效果。
+  4)Virtual-dom:Virtual Dom可以看做一棵模拟了DOM树的JavaScript树，其主要是通过vnode,实现一个无状态的组件，当组件状态发生更新时，然后触发Virtual Dom数据的变化，然后通过Virtual Dom和真实DOM的比对，再对真实DOM更新。可以简单认为Virtual Dom是真实DOM的缓存。
+  我们实现一个具有复杂状态的界面，组件上绑定的数据就会很多。由于界面的状态很多多，我们需要维护的事件和数据就很多。在这种情况下，我们使用virtual DOM只更新状态发生变化的视图。这样不仅有利于性能的提升，而且从移植性上看，Virtual Dom对真实dom做了一次抽象，Virtual Dom对应的可以不是浏览器的DOM，而是不同设备的组件，极大的方便了多平台的使用。
+      Virtual-DOM的实现过程:
+      1)初始渲染时，首先将数据渲染为 Virtual DOM，然后由 Virtual DOM 生成 DOM。
+      2)数据更新时，渲染得到新的 Virtual DOM，与上一次得到的 Virtual DOM 进行 diff，得到所有需要在 DOM 上进行的变更，然后在 patch 过程中应用到 DOM 上实现UI的同步更新。
