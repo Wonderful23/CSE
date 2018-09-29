@@ -99,4 +99,6 @@
 >> * Vue.js使用基于依赖追踪的观察并且使用异步队列更新。所有的数据都是独立触发。<br></br>
 ### Vue.JS,React,Vue性能比较
 >性能比较如下图。
-
+>![ABD](https://github.com/Wonderful23/-/blob/master/11/%E5%AF%B9%E6%AF%94.jpg)
+>可见Vue的性能是略优于React
+>![ABD](https://github.com/Wonderful23/-/blob/master/11/%E5%AF%B9%E6%AF%94.jpg)
