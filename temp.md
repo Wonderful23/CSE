@@ -76,5 +76,5 @@
 >> * 独立开发：开发人员可以更加注重业务逻辑和数据开发（ViewModel）设计人员更加注重界面的开发（View）<br></br>
 >> *  低耦合性：View可以独立于Model的修改<br></br>
 >> *  可重用性：可将视图逻辑封装成一个ViewModel，多个View可以通过ViewModel重复使用这段视图逻辑<br></br>
-
-   
+>![ABD](https://github.com/Wonderful23/-/blob/master/11/mvvm.png)
+>   
