@@ -34,7 +34,7 @@
 >视图是由数据驱动生成的，对视图的修改不会直接修改DOM，而是修改相应的数据。当交互复杂时，我们只是关<br></br>心数据的修改，这让代码的逻辑变得清晰，而且由于不触碰到DOM，有利于代码的维护。
 >
 ### Vue的双向绑定 
->Vue使用的是数据劫持结合发布者-订阅者模式。
+><b>Vue使用的是数据劫持结合发布者-订阅者模式。</b>
 >> * 需要对observe的数据对象进行递归遍历，包括子属性对象的属性，都加上setter  getter。这个对象的某<br></br>个属性赋值，就会触发setter，那么就能监听到数据变化。<br></br>
 >>* 需要compile解析模板指令，将模板中的变量替换成数据，接着初始化渲染页面视图，并将每个指令对应<br></br>的节点绑定更新函数，添加监听数据的订阅者。一旦数据有变动，订阅者收到通知，就会更新视图<br></br>
 >> * Watcher订阅者是Observer和Compile之间通信的桥梁，主要负责：
@@ -51,7 +51,7 @@
 ### Virtual-DOM
 >Virtual Dom可以看做一棵模拟了DOM树的JavaScript树，其主要是通过vnode,实现一个无状态的组件，当组件状态<br></br>发生更新时，然后触发Virtual Dom数据的变化，然后通过Virtual Dom和真实DOM的比对，再对真实DOM更新。<br></br>可以简单认为Virtual Dom是真实DOM的缓存。<br></br>
 我们实现一个具有复杂状态的界面，组件上绑定的数据就会很多。由于界面的状态很多多，我们需要维护的事件和<br></br>数据就很多。在这种情况下，我们使用virtual DOM只更新状态发生变化的视图。这样不仅有利于性能的提升，而<br></br>且从移植性上看，Virtual Dom对真实dom做了一次抽象，Virtual Dom对应的可以不是浏览器的DOM，而是不同设<br></br>备的组件，极大的方便了多平台的使用。<br></br>
-> Virtual-DOM的实现过程
+> <b>Virtual-DOM的实现过程</b>
 >> * 初始渲染时，首先将数据渲染为 Virtual DOM，然后由 Virtual DOM 生成 DOM。<br></br>
 >> * 数据更新时，渲染得到新的 Virtual DOM，与上一次得到的 Virtual DOM 进行 diff，得到所有需要在 <br></br>DOM 上进行的变更，然后在 patch 过程中应用到 DOM 上实现UI的同步更新。
 >>
@@ -61,7 +61,7 @@
 >![ABD](https://github.com/Wonderful23/-/blob/master/11/virtual2.png)
 >
 ### MVVM模型(Model-View-ViewModel)
->MVVM模型解析
+><b>MVVM模型解析</b>
 >> * ViewModel 是Vue的核心也是vue的一个实例，可以用于连接View和Model，是一个同步View和model的对象。<br></br>
 >> *   2.DOM Listeners和Data Bindings是实现双向绑定的关键。<br></br>
 >> *   3.DOM Listeners用于监测页面上DOM元素的变化，如果有变化，则更改Model中的数据.<br></br> 
@@ -71,7 +71,7 @@
 >> *   7.Vue是以数据为驱动的，Vue自身将DOM和数据进行绑定，一旦创建绑定，DOM和数据将保持同步，<br></br>每当数据发生变化，DOM会跟着变化。<br></br>
 >> *   8.在MVVM模式下，View和model不可以直接通信，要应用ViewModel来实现<br></br>
 >>
->MVVM的优点：
+><b>MVVM的优点：</b>
 >> * 方便测试：我们可以测试ViewModel来验证我们的代码是否有误。<br></br>
 >> * 独立开发：开发人员可以更加注重业务逻辑和数据开发（ViewModel）设计人员更加注重界面的开发（View）<br></br>
 >> *  低耦合性：View可以独立于Model的修改<br></br>
@@ -80,28 +80,29 @@
 >   
 # Vue.JS 与 React，Angular的区别和联系
 ### Vue.Js 与 React：
-> 相同点：
+> <b>相同点：</b>
 >> * 中心思想相同：一切都是组件，组件实例之间可以嵌套。<br></br>
 >> * 都提供合理的钩子函数，可以让开发者定制化地去处理需求。<br></br>
 >> * 都不内置列数AJAX，Route等功能到核心包，而是以插件的方式加载。<br></br>
 >>
->不同点：
+><b>不同点：</b>
 >>React依赖Virtual DOM,而Vue.js使用的是DOM模板。React采用的Virtual DOM会对渲染出来的结果做脏检查。<br></br>
 >>Vue.js在模板中提供了指令，过滤器等，可以非常方便，快捷地操作DOM。
 ### Vue.JS与Angular:
->相同点：
+><b>相同点：</b>
 >> * 都支持指令：内置指令和自定义指令。<br></br>
 >> * 都支持过滤器：内置过滤器和自定义过滤器。<br></br>
 >> * 都支持双向数据绑定。<br></br>
->不同点：
+><b>不同点：</b>
 >> * AngularJS的学习成本高，而Vue.js本身提供的API都比较简单、直观。<br></br>
 >> * 在性能上，AngularJS依赖对数据做脏检查，所以Watcher越多越慢。<br></br>
 >> * Vue.js使用基于依赖追踪的观察并且使用异步队列更新。所有的数据都是独立触发。<br></br>
 ### Vue.JS,React,Vue性能比较
->性能比较如下图。<br></br>
+><b>性能比较如下图。</b><br></br>
 >![ABD](https://github.com/Wonderful23/-/blob/master/11/%E5%AF%B9%E6%AF%94.jpg)
 ><br></br>
 >可见Vue的性能是略优于React
+><br></br>
 >![ABD](https://github.com/Wonderful23/-/blob/master/11/%E5%AF%B9%E7%AC%942.jpg)
 ><br></br>
 >Vue除了首屏渲染耗时比较长，其他的耗时均很短。
