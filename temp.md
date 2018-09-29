@@ -5,7 +5,7 @@
 >Vue是一套构建用户界面的<b>渐进式框架</b>。Vue被设计成<b>自底向上</b>的逐层应用。Vue的核心库只关注视图层面，不仅容易上<br></br>手，还便于与第三方库，已有项目相结合。
 # Vue出现的背景
 >随着网页更加动态化，功能更加复杂，很多传统的服务端的代码被引入到浏览器中，这就导致了网页中的JS代码的数量<br></br>急剧增多。JavaScript代码连接了很多html和css代码，如果缺乏正规的组织形式，就会对网页的编写和维护产生影响。在<br></br>此前提下，就产生了很多的JavaScript Framework。Vue 无疑是其中最出色的框架之一。
-# Vue的几个突出特点 
+# Vue的优点 
 ### Vue采用渐进式框架
 ><b>渐进式</b>（引用大神的解释）
 >>Vue (pronounced /vjuː/, like view) is a progressive framework for building user interfaces. Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable. The core library is focused on the view layer only, and is very easy to pick up and integrate with other libraries or existing projects. On the other hand, Vue is also perfectly capable of powering sophisticated Single-Page Applications when used in combination with modern tooling and supporting libraries.
@@ -86,5 +86,16 @@
 >>> * 都不内置列数AJAX，Route等功能到核心包，而是以插件的方式加载。<br></br>
 >>>
 >>不同点：
->>>React依赖Virtual DOM,而Vue.js使用的是DOM模板。React采用的Virtual DOM会对渲染出来的结果做脏检查。
+>>>React依赖Virtual DOM,而Vue.js使用的是DOM模板。React采用的Virtual DOM会对渲染出来的结果做脏检查。<br></br>
 Vue.js在模板中提供了指令，过滤器等，可以非常方便，快捷地操作DOM。
+> Vue.JS与Angular:
+>>相同点：
+>>> * 都支持指令：内置指令和自定义指令。<br></br>
+>>> * 都支持过滤器：内置过滤器和自定义过滤器。<br></br>
+>>> * 都支持双向数据绑定。<br></br>
+>>不同点：
+>>> * AngularJS的学习成本高，而Vue.js本身提供的API都比较简单、直观。<br></br>
+>>> * 在性能上，AngularJS依赖对数据做脏检查，所以Watcher越多越慢。<br></br>
+>>> * Vue.js使用基于依赖追踪的观察并且使用异步队列更新。所有的数据都是独立触发。<br></br>
+>Vue.JS,React,Vue性能比较
+>![ABD]()
