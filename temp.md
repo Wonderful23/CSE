@@ -52,4 +52,7 @@
 >> Virtual-DOM的实现过程
 >>> * 初始渲染时，首先将数据渲染为 Virtual DOM，然后由 Virtual DOM 生成 DOM。<br></br>
 >>> * 数据更新时，渲染得到新的 Virtual DOM，与上一次得到的 Virtual DOM 进行 diff，得到所有需要在 <br></br>DOM 上进行的变更，然后在 patch 过程中应用到 DOM 上实现UI的同步更新。
-
+>>>
+>>
+>
+![ABD](https://github.com/Wonderful23/-/blob/master/11/%E6%A8%A1%E5%9E%8B.jpg)
