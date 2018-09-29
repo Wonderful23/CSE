@@ -78,24 +78,25 @@
 >> *  可重用性：可将视图逻辑封装成一个ViewModel，多个View可以通过ViewModel重复使用这段视图逻辑<br></br>
 >![ABD](https://github.com/Wonderful23/-/blob/master/11/mvvm.png)
 >   
-### Vue.JS 与 React，Angular的区别和联系
->Vue.Js 与 React：
->> 相同点：
->>> * 中心思想相同：一切都是组件，组件实例之间可以嵌套。<br></br>
->>> * 都提供合理的钩子函数，可以让开发者定制化地去处理需求。<br></br>
->>> * 都不内置列数AJAX，Route等功能到核心包，而是以插件的方式加载。<br></br>
->>>
->>不同点：
->>>React依赖Virtual DOM,而Vue.js使用的是DOM模板。React采用的Virtual DOM会对渲染出来的结果做脏检查。<br></br>
-Vue.js在模板中提供了指令，过滤器等，可以非常方便，快捷地操作DOM。
-> Vue.JS与Angular:
->>相同点：
->>> * 都支持指令：内置指令和自定义指令。<br></br>
->>> * 都支持过滤器：内置过滤器和自定义过滤器。<br></br>
->>> * 都支持双向数据绑定。<br></br>
->>不同点：
->>> * AngularJS的学习成本高，而Vue.js本身提供的API都比较简单、直观。<br></br>
->>> * 在性能上，AngularJS依赖对数据做脏检查，所以Watcher越多越慢。<br></br>
->>> * Vue.js使用基于依赖追踪的观察并且使用异步队列更新。所有的数据都是独立触发。<br></br>
->Vue.JS,React,Vue性能比较
->![ABD]()
+# Vue.JS 与 React，Angular的区别和联系
+### Vue.Js 与 React：
+> 相同点：
+>> * 中心思想相同：一切都是组件，组件实例之间可以嵌套。<br></br>
+>> * 都提供合理的钩子函数，可以让开发者定制化地去处理需求。<br></br>
+>> * 都不内置列数AJAX，Route等功能到核心包，而是以插件的方式加载。<br></br>
+>>
+>不同点：
+>>React依赖Virtual DOM,而Vue.js使用的是DOM模板。React采用的Virtual DOM会对渲染出来的结果做脏检查。<br></br>
+>>Vue.js在模板中提供了指令，过滤器等，可以非常方便，快捷地操作DOM。
+### Vue.JS与Angular:
+>相同点：
+>> * 都支持指令：内置指令和自定义指令。<br></br>
+>> * 都支持过滤器：内置过滤器和自定义过滤器。<br></br>
+>> * 都支持双向数据绑定。<br></br>
+>不同点：
+>> * AngularJS的学习成本高，而Vue.js本身提供的API都比较简单、直观。<br></br>
+>> * 在性能上，AngularJS依赖对数据做脏检查，所以Watcher越多越慢。<br></br>
+>> * Vue.js使用基于依赖追踪的观察并且使用异步队列更新。所有的数据都是独立触发。<br></br>
+### Vue.JS,React,Vue性能比较
+>性能比较如下图。
+
