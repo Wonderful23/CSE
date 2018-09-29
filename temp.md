@@ -19,3 +19,9 @@ PROS & CONS OF Vue.JS
 <br></br>3）客户端路由：借助Vue插件vue-router向每个路由发出渲染的组件类型、渲染的地址的信息。
 <br></br>4）状态管理:借助Vue的状态管理插件管理了所有组件的状态。
 <br></br>5）构建系统:借助Vue-ci构建大型应用,进行前后端分离、优化代码结构、提高开发效率。
+>>
+>Vue的渐进式框架在工程的应用：
+>>1)将Vue作为应用的一部分嵌入现有的服务端应用程序，提高交互式体验<br></br>
+2)将更多业务逻辑放在前端实现
+>>
+![ABD](https://github.com/Wonderful23/-/blob/master/11/t013dad0e25dfb0b247.jpg)
