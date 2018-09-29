@@ -43,6 +43,8 @@
 >>>    * viewmodel(vue实例对象)作为数据绑定的入口，整合Observer、Compile、Watcher三者，通过Observer<br></br>来监听自己的model数据变化，通过Compile来解析编译模板指令，最终利用Watcher搭起Observer和<br></br>Compile之间的通信桥梁，达到数据变化(ViewModel)-》视图更新(view)；视图变化(view)-》数据<br></br>(ViewModel)变更的双向绑定效果。
 >>>
 >>
+>
+<br>/<br>
 ![ABD](https://github.com/Wonderful23/-/blob/master/11/%E6%A8%A1%E5%9E%8B.jpg)
 ><b>Virtual-DOM</b>
 >>Virtual Dom可以看做一棵模拟了DOM树的JavaScript树，其主要是通过vnode,实现一个无状态的组件，当组件状态发生更新时，然后触发Virtual Dom数据的变化，然后通过Virtual Dom和真实DOM的比对，再对真实DOM更新。可以简单认为Virtual Dom是真实DOM的缓存。<br></br>
