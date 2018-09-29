@@ -45,7 +45,9 @@
 >>
 >
 <br>/<br>
-![ABD](https://github.com/Wonderful23/-/blob/master/11/%E6%A8%A1%E5%9E%8B.jpg)
+>![ABD](https://github.com/Wonderful23/-/blob/master/11/%E6%A8%A1%E5%9E%8B.jpg)
+>
+
 ><b>Virtual-DOM</b>
 >>Virtual Dom可以看做一棵模拟了DOM树的JavaScript树，其主要是通过vnode,实现一个无状态的组件，当组件状态<br></br>发生更新时，然后触发Virtual Dom数据的变化，然后通过Virtual Dom和真实DOM的比对，再对真实DOM更新。<br></br>可以简单认为Virtual Dom是真实DOM的缓存。<br></br>
 我们实现一个具有复杂状态的界面，组件上绑定的数据就会很多。由于界面的状态很多多，我们需要维护的事件和<br></br>数据就很多。在这种情况下，我们使用virtual DOM只更新状态发生变化的视图。这样不仅有利于性能的提升，而<br></br>且从移植性上看，Virtual Dom对真实dom做了一次抽象，Virtual Dom对应的可以不是浏览器的DOM，而是不同设<br></br>备的组件，极大的方便了多平台的使用。
@@ -55,6 +57,6 @@
 >>>
 >>
 >
-![ABD](https://github.com/Wonderful23/-/blob/master/11/virtual1.png)
-![ABD](https://github.com/Wonderful23/-/blob/master/11/virtual2.png)
+>![ABD](https://github.com/Wonderful23/-/blob/master/11/virtual1.png)
+>![ABD](https://github.com/Wonderful23/-/blob/master/11/virtual2.png)
 
