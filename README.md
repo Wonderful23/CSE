@@ -33,3 +33,7 @@
    6.Model 层代表数据模型，可以在Model中定义数据修改和操作的业务逻辑
    7.Vue是以数据为驱动的，Vue自身将DOM和数据进行绑定，一旦创建绑定，DOM和数据将保持同步，每当数据发生变化，DOM会跟着变化。
    8.在MVVM模式下，View和model不可以直接通信，要应用ViewModel来实现
+   MVVM的优点：方便测试：我们可以测试ViewModel来验证我们的代码是否有误。
+              独立开发：开发人员可以更加注重业务逻辑和数据开发（ViewModel）设计人员更加注重界面的开发（View）
+              低耦合性：View可以独立于Model的修改
+              可重用性：可以将视图逻辑封装成一个ViewModel，多个View可以通过ViewModel重复使用这段视图逻辑。
