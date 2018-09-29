@@ -12,4 +12,10 @@ PROS & CONS OF Vue.JS
 >>
 >渐进式框架（见下图）
 <br></br>
-![ABD](https://github.com/Wonderful23/-/blob/master/11/t013dad0e25dfb0b247.jpg)
+![ABD](https://github.com/Wonderful23/-/blob/master/11/%E6%B8%90%E8%BF%9B%E5%BC%8F2.png)
+>框架解释：
+>>1）声明式渲染：采用简洁的模板语法将数据声明式的渲染进入DOM中比如借助v-model="message"和{{message}}将message渲染进入DOM中。
+<br></br>2）组件系统：自定义一些元素，构成组件，类似于C++中的class
+<br></br>3）客户端路由：借助Vue插件vue-router向每个路由发出渲染的组件类型、渲染的地址的信息。
+<br></br>4）状态管理:借助Vue的状态管理插件管理了所有组件的状态。
+<br></br>5）构建系统:借助Vue-ci构建大型应用,进行前后端分离、优化代码结构、提高开发效率。
