@@ -48,33 +48,33 @@
 >![ABD](https://github.com/Wonderful23/-/blob/master/11/%E6%A8%A1%E5%9E%8B.jpg)
 >
 
-><b>Virtual-DOM</b>
->>Virtual Dom可以看做一棵模拟了DOM树的JavaScript树，其主要是通过vnode,实现一个无状态的组件，当组件状态<br></br>发生更新时，然后触发Virtual Dom数据的变化，然后通过Virtual Dom和真实DOM的比对，再对真实DOM更新。<br></br>可以简单认为Virtual Dom是真实DOM的缓存。<br></br>
+### Virtual-DOM
+>Virtual Dom可以看做一棵模拟了DOM树的JavaScript树，其主要是通过vnode,实现一个无状态的组件，当组件状态<br></br>发生更新时，然后触发Virtual Dom数据的变化，然后通过Virtual Dom和真实DOM的比对，再对真实DOM更新。<br></br>可以简单认为Virtual Dom是真实DOM的缓存。<br></br>
 我们实现一个具有复杂状态的界面，组件上绑定的数据就会很多。由于界面的状态很多多，我们需要维护的事件和<br></br>数据就很多。在这种情况下，我们使用virtual DOM只更新状态发生变化的视图。这样不仅有利于性能的提升，而<br></br>且从移植性上看，Virtual Dom对真实dom做了一次抽象，Virtual Dom对应的可以不是浏览器的DOM，而是不同设<br></br>备的组件，极大的方便了多平台的使用。
->> Virtual-DOM的实现过程
->>> * 初始渲染时，首先将数据渲染为 Virtual DOM，然后由 Virtual DOM 生成 DOM。<br></br>
->>> * 数据更新时，渲染得到新的 Virtual DOM，与上一次得到的 Virtual DOM 进行 diff，得到所有需要在 <br></br>DOM 上进行的变更，然后在 patch 过程中应用到 DOM 上实现UI的同步更新。
->>>
+> Virtual-DOM的实现过程
+>> * 初始渲染时，首先将数据渲染为 Virtual DOM，然后由 Virtual DOM 生成 DOM。<br></br>
+>> * 数据更新时，渲染得到新的 Virtual DOM，与上一次得到的 Virtual DOM 进行 diff，得到所有需要在 <br></br>DOM 上进行的变更，然后在 patch 过程中应用到 DOM 上实现UI的同步更新。
 >>
+>
 >
 >![ABD](https://github.com/Wonderful23/-/blob/master/11/virtual1.png)
 >![ABD](https://github.com/Wonderful23/-/blob/master/11/virtual2.png)
 >
-><b>MVVM模型</b>(Model-View-ViewModel)
->>MVVM模型解析
->>> * ViewModel 是Vue的核心也是vue的一个实例，可以用于连接View和Model，是一个同步View和model的对象。<br></br>
->>> *   2.DOM Listeners和Data Bindings是实现双向绑定的关键。<br></br>
->>> *   3.DOM Listeners用于监测页面上DOM元素的变化，如果有变化，则更改Model中的数据.<br></br> 
->>> *   4.Data Bindings工具会帮我们更新页面中的DOM元素<br></br>
->>> *   5.View 代表UI 组件，它负责将数据模型转化成UI 展现出来<br></br>
->>> *   6.Model 层代表数据模型，可以在Model中定义数据修改和操作的业务逻辑<br></br>
->>> *   7.Vue是以数据为驱动的，Vue自身将DOM和数据进行绑定，一旦创建绑定，DOM和数据将保持同步，<br></br>每当数据发生变化，DOM会跟着变化。<br></br>
->>> *   8.在MVVM模式下，View和model不可以直接通信，要应用ViewModel来实现<br></br>
->>>
->>MVVM的优点：
->>> * 方便测试：我们可以测试ViewModel来验证我们的代码是否有误。<br></br>
->>> * 独立开发：开发人员可以更加注重业务逻辑和数据开发（ViewModel）设计人员更加注重界面的开发（View）<br></br>
->>> *  低耦合性：View可以独立于Model的修改<br></br>
->>> *  可重用性：可将视图逻辑封装成一个ViewModel，多个View可以通过ViewModel重复使用这段视图逻辑<br></br>
+### MVVM模型(Model-View-ViewModel)
+>MVVM模型解析
+>> * ViewModel 是Vue的核心也是vue的一个实例，可以用于连接View和Model，是一个同步View和model的对象。<br></br>
+>> *   2.DOM Listeners和Data Bindings是实现双向绑定的关键。<br></br>
+>> *   3.DOM Listeners用于监测页面上DOM元素的变化，如果有变化，则更改Model中的数据.<br></br> 
+>> *   4.Data Bindings工具会帮我们更新页面中的DOM元素<br></br>
+>> *   5.View 代表UI 组件，它负责将数据模型转化成UI 展现出来<br></br>
+>> *   6.Model 层代表数据模型，可以在Model中定义数据修改和操作的业务逻辑<br></br>
+>> *   7.Vue是以数据为驱动的，Vue自身将DOM和数据进行绑定，一旦创建绑定，DOM和数据将保持同步，<br></br>每当数据发生变化，DOM会跟着变化。<br></br>
+>> *   8.在MVVM模式下，View和model不可以直接通信，要应用ViewModel来实现<br></br>
+>>
+>MVVM的优点：
+>> * 方便测试：我们可以测试ViewModel来验证我们的代码是否有误。<br></br>
+>> * 独立开发：开发人员可以更加注重业务逻辑和数据开发（ViewModel）设计人员更加注重界面的开发（View）<br></br>
+>> *  低耦合性：View可以独立于Model的修改<br></br>
+>> *  可重用性：可将视图逻辑封装成一个ViewModel，多个View可以通过ViewModel重复使用这段视图逻辑<br></br>
 
    
