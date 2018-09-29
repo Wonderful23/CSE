@@ -102,3 +102,6 @@
 >![ABD](https://github.com/Wonderful23/-/blob/master/11/%E5%AF%B9%E6%AF%94.jpg)
 ><br></br>
 >可见Vue的性能是略优于React
+>![ABD](https://github.com/Wonderful23/-/blob/master/11/%E5%AF%B9%E7%AC%942.jpg)
+><br></br>
+>Vue除了首屏渲染耗时比较长，其他的耗时均很短。
