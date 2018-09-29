@@ -100,4 +100,5 @@
 ### Vue.JS,React,Vue性能比较
 >性能比较如下图。<br></br>
 >![ABD](https://github.com/Wonderful23/-/blob/master/11/%E5%AF%B9%E6%AF%94.jpg)
+><br></br>
 >可见Vue的性能是略优于React
