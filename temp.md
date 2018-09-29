@@ -26,6 +26,18 @@
 >>
 ![ABD](https://github.com/Wonderful23/-/blob/master/11/%E6%B8%90%E8%BF%9B%E5%BC%8F.png)
 ><b>Vue的组件化开发</b>
->>Vue将网页分割成一个个可复用的组件，每个组件由html，Javascript，css封装形成。这些组件用于渲染网页的特定<br></br>部分。类似于面向对象中的类，和面向过程中的函数。
+>>Vue将网页分割成一个个可复用的组件，每个组件由html，Javascript，css封装形成。这些组件用于渲染网页的特定<br></br>部分。类似于面向对象中的类，和面向过程中的函数。<br></br>
 >>
 ![ABD](https://github.com/Wonderful23/-/blob/master/11/v2-bba1a9deb9200210257d250f1cdb9ee3_hd.jpg)
+><b>Vue的数据驱动</b>
+>>视图是由数据驱动生成的，对视图的修改不会直接修改DOM，而是修改相应的数据。当交互复杂时，我们只是关心数据的修改，这让代码的逻辑变得清晰，而且由于不触碰到DOM，有利于代码的维护。
+>>
+><b>Vue的双向绑定</b>
+>>Vue使用的是数据劫持结合发布者-订阅者模式。
+>>> * 需要对observe的数据对象进行递归遍历，包括子属性对象的属性，都加上setter  getter。这个对象的某个属性赋值，就会触发setter，那么就能监听到数据变化。
+   * 需要compile解析模板指令，将模板中的变量替换成数据，接着初始化渲染页面视图，并将每个指令对应的节点绑定更新函数，添加监听数据的订阅者。一旦数据有变动，订阅者收到通知，就会更新视图
+  接着Watcher订阅者是Observer和Compile之间通信的桥梁，主要负责：
+         1）在自身实例化时，往属性订阅器（Dep）里面添加自己
+         2）自身必须有一个update()方法
+         3）待属性变动，dep.notice()通知时，就调用自身的update()方法，并触发Compile中绑定的回调
+    * viewmodel(vue实例对象)作为数据绑定的入口，整合Observer、Compile、Watcher三者，通过Observer来监听自己的model数据变化，通过Compile来解析编译模板指令，最终利用Watcher搭起Observer和Compile之间的通信桥梁，达到数据变化 (ViewModel)-》视图更新(view)；视图变化(view)-》数据(ViewModel)变更的双向绑定效果。
