@@ -56,5 +56,5 @@
 >>
 >
 ![ABD](https://github.com/Wonderful23/-/blob/master/11/virtual1.png)
-![ABD](https://github.com/Wonderful23/-/blob/master/11/virtual1.png)
+![ABD](https://github.com/Wonderful23/-/blob/master/11/virtual2.png)
 
