@@ -6,8 +6,8 @@
 # Vue出现的背景
 >随着网页更加动态化，功能更加复杂，很多传统的服务端的代码被引入到浏览器中，这就导致了网页中的JS代码的数量<br></br>急剧增多。JavaScript代码连接了很多html和css代码，如果缺乏正规的组织形式，就会对网页的编写和维护产生影响。在<br></br>此前提下，就产生了很多的JavaScript Framework。Vue 无疑是其中最出色的框架之一。
 # Vue的几个突出特点 
-### 1.Vue采用渐进式框架
->渐进式（引用大神的解释）
+### Vue采用渐进式框架
+><b>渐进式</b>（引用大神的解释）
 >>Vue (pronounced /vjuː/, like view) is a progressive framework for building user interfaces. Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable. The core library is focused on the view layer only, and is very easy to pick up and integrate with other libraries or existing projects. On the other hand, Vue is also perfectly capable of powering sophisticated Single-Page Applications when used in combination with modern tooling and supporting libraries.
 >>
 ><b>渐进式框架</b>（见下图）
@@ -25,24 +25,25 @@
 2)将更多业务逻辑放在前端实现
 >>
 ![ABD](https://github.com/Wonderful23/-/blob/master/11/%E6%B8%90%E8%BF%9B%E5%BC%8F.png)
-><b>Vue的组件化开发</b>
->>Vue将网页分割成一个个可复用的组件，每个组件由html，Javascript，css封装形成。这些组件用于渲染网页的特定<br></br>部分。类似于面向对象中的类，和面向过程中的函数。<br></br>
->>
+>
+### Vue的组件化开发
+>Vue将网页分割成一个个可复用的组件，每个组件由html，Javascript，css封装形成。这些组件用于渲染网页的特定<br></br>部分。类似于面向对象中的类，和面向过程中的函数。<br></br>
+>
 ![ABD](https://github.com/Wonderful23/-/blob/master/11/v2-bba1a9deb9200210257d250f1cdb9ee3_hd.jpg)
-><b>Vue的数据驱动</b>
->>视图是由数据驱动生成的，对视图的修改不会直接修改DOM，而是修改相应的数据。当交互复杂时，我们只是关<br></br>心数据的修改，这让代码的逻辑变得清晰，而且由于不触碰到DOM，有利于代码的维护。
+### Vue的数据驱动
+>视图是由数据驱动生成的，对视图的修改不会直接修改DOM，而是修改相应的数据。当交互复杂时，我们只是关<br></br>心数据的修改，这让代码的逻辑变得清晰，而且由于不触碰到DOM，有利于代码的维护。
+>
+### Vue的双向绑定 
+>Vue使用的是数据劫持结合发布者-订阅者模式。
+>> * 需要对observe的数据对象进行递归遍历，包括子属性对象的属性，都加上setter  getter。这个对象的某<br></br>个属性赋值，就会触发setter，那么就能监听到数据变化。<br></br>
+>>* 需要compile解析模板指令，将模板中的变量替换成数据，接着初始化渲染页面视图，并将每个指令对应<br></br>的节点绑定更新函数，添加监听数据的订阅者。一旦数据有变动，订阅者收到通知，就会更新视图<br></br>
+>> * Watcher订阅者是Observer和Compile之间通信的桥梁，主要负责：
+>>> * 在自身实例化时，往属性订阅器（Dep）里面添加自己<br></br>
+>>> * 自身必须有一个update()方法<br></br>
+>>> * 待属性变动，dep.notice()通知时，就调用自身的update()方法，并触发Compile中绑定的回调
+>>    * viewmodel(vue实例对象)作为数据绑定的入口，整合Observer、Compile、Watcher三者，通过Observer<br></br>来监听自己的model数据变化，通过Compile来解析编译模板指令，最终利用Watcher搭起Observer和<br></br>Compile之间的通信桥梁，达到数据变化(ViewModel)-》视图更新(view)；视图变化(view)-》数据<br></br>(ViewModel)变更的双向绑定效果。
 >>
-><b>Vue的双向绑定</b>
->>Vue使用的是数据劫持结合发布者-订阅者模式。
->>> * 需要对observe的数据对象进行递归遍历，包括子属性对象的属性，都加上setter  getter。这个对象的某<br></br>个属性赋值，就会触发setter，那么就能监听到数据变化。<br></br>
->>>* 需要compile解析模板指令，将模板中的变量替换成数据，接着初始化渲染页面视图，并将每个指令对应<br></br>的节点绑定更新函数，添加监听数据的订阅者。一旦数据有变动，订阅者收到通知，就会更新视图<br></br>
->>> * Watcher订阅者是Observer和Compile之间通信的桥梁，主要负责：
->>>> * 在自身实例化时，往属性订阅器（Dep）里面添加自己<br></br>
->>>> * 自身必须有一个update()方法<br></br>
->>>> * 待属性变动，dep.notice()通知时，就调用自身的update()方法，并触发Compile中绑定的回调
->>>    * viewmodel(vue实例对象)作为数据绑定的入口，整合Observer、Compile、Watcher三者，通过Observer<br></br>来监听自己的model数据变化，通过Compile来解析编译模板指令，最终利用Watcher搭起Observer和<br></br>Compile之间的通信桥梁，达到数据变化(ViewModel)-》视图更新(view)；视图变化(view)-》数据<br></br>(ViewModel)变更的双向绑定效果。
->>>
->>
+>
 >
 >![ABD](https://github.com/Wonderful23/-/blob/master/11/%E6%A8%A1%E5%9E%8B.jpg)
 >
