@@ -106,3 +106,10 @@
 >![ABD](https://github.com/Wonderful23/-/blob/master/11/%E5%AF%B9%E7%AC%942.jpg)
 ><br></br>
 >Vue除了首屏渲染耗时比较长，其他的耗时均很短。
+# Vue.JS 存在的不足
+> * Vue的发布时间短，有不成熟的地方。<br></br>
+> * Vue 还缺少一些有名的库<br></br>
+> * 不支持 Intellisense 和 GotoDefine<br></br>
+> * Vue缺乏大型开发用的库<br></br>
+> * 社区不大，且Vue的功能仅限于view<br></br>
+> * 出现了问题，解决问题的成本较高。<br></br>
