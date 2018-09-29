@@ -25,3 +25,7 @@
 2)将更多业务逻辑放在前端实现
 >>
 ![ABD](https://github.com/Wonderful23/-/blob/master/11/%E6%B8%90%E8%BF%9B%E5%BC%8F.png)
+><b>Vue的组件化开发</b>
+>>将视图中的常用模块封装成一个个组件。而一个网页可以分割成多个可复用的组件，每个组件都可以包含html，css，JavaScript，用于渲染网页的特定部分。类似于面向对象中的类，和面向过程中的函数。
+>>
+![ABD](https://github.com/Wonderful23/-/blob/master/11/%E6%B8%90%E8%BF%9B%E5%BC%8F.png)
