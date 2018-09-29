@@ -26,6 +26,6 @@
 >>
 ![ABD](https://github.com/Wonderful23/-/blob/master/11/%E6%B8%90%E8%BF%9B%E5%BC%8F.png)
 ><b>Vue的组件化开发</b>
->>Vue将网页分割成一个个可复用的组件，每个组件由html，Javascript，css封装形成。这些组件用于渲染网页的特定部分。类似于面向对象中的类，和面向过程中的函数。
+>>Vue将网页分割成一个个可复用的组件，每个组件由html，Javascript，css封装形成。这些组件用于渲染网页的特定<br></br>部分。类似于面向对象中的类，和面向过程中的函数。
 >>
 ![ABD](https://github.com/Wonderful23/-/blob/master/11/v2-bba1a9deb9200210257d250f1cdb9ee3_hd.jpg)
