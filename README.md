@@ -24,7 +24,7 @@
       Virtual-DOM的实现过程:
       1)初始渲染时，首先将数据渲染为 Virtual DOM，然后由 Virtual DOM 生成 DOM。
       2)数据更新时，渲染得到新的 Virtual DOM，与上一次得到的 Virtual DOM 进行 diff，得到所有需要在 DOM 上进行的变更，然后在 patch 过程中应用到 DOM 上实现UI的同步更新。
-   5)MVVM模型：
+   5)MVVM模型：(Model-View-ViewModel)
    1.ViewModel 是Vue的核心也是vue的一个实例，可以用于连接View和Model，是一个同步View和model的对象。
    2.DOM Listeners和Data Bindings是实现双向绑定的关键。
    3.DOM Listeners用于监测页面上DOM元素的变化，如果有变化，则更改Model中的数据； 
@@ -32,3 +32,4 @@
    5.View 代表UI 组件，它负责将数据模型转化成UI 展现出来
    6.Model 层代表数据模型，可以在Model中定义数据修改和操作的业务逻辑
    7.Vue是以数据为驱动的，Vue自身将DOM和数据进行绑定，一旦创建绑定，DOM和数据将保持同步，每当数据发生变化，DOM会跟着变化。
+   8.在MVVM模式下，View和model不可以直接通信，要应用ViewModel来实现
