@@ -1,0 +1,14 @@
+## File System
+- block_size 过大的话，读取快，但是会浪费，block_size小的话，速度慢
+- 机械硬盘越用越慢，随机化访问。
+- 文件顺序存储
+- FFS 尽量找连续的block,或者预留空间，但是这样会浪费
+- 相同目录放在一起。
+- 磁盘不停转，读一个block，但是要处理已到下一个block，处理方法，隔一段的放置。 Rotational Delay，或者一次性读多个block
+- inode table放置在磁盘最外圈，在好几个文件读写中不好，inode数量已经订好了-》inode信息与文件数据放置在一起，目录一起读，不需要寻道，inode放置在一块。比较保险。
+- inode 每个block group都有
+- free a file.尽量将连续的分给他。如果block group只剩下10%就不写如，安排别的block group,因为剩下的可能是散的。
+- 小文件就直接存储在inode中
+- 文件连续的话可以砍掉索引的时间，inode索引改掉之后inode指针后面有10个block
+- erase pages 以block
+- PE Cycle
